@@ -1,4 +1,5 @@
-FROM clearwater/base
+#FROM clearwater/base
+FROM registry.cn-shenzhen.aliyuncs.com/jaydomchen/clearwater:base
 MAINTAINER maintainers@projectclearwater.org
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes homestead

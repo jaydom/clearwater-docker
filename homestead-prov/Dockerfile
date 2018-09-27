@@ -2,7 +2,7 @@
 FROM registry.cn-shenzhen.aliyuncs.com/jaydomchen/clearwater:base
 MAINTAINER maintainers@projectclearwater.org
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes homestead-prov clearwater-prov-tools
+RUN sudo apt-get update && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes homestead-prov clearwater-prov-tools
 
 COPY homestead-prov.supervisord.conf /etc/supervisor/conf.d/homestead-prov.conf
 COPY nginx.supervisord.conf /etc/supervisor/conf.d/nginx.conf
